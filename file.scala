@@ -33,7 +33,7 @@ Bind
 				
 
 I ended with sth like:
-ResultConverter
+Bind
 	StructNode (I need a name for this structNode)	
 		(FieldSymbol, StructNode)
 			FieldSymbol (not sure if field symbol is the right choice)

@@ -33,17 +33,17 @@ Bind
 				
 
 I ended with sth like:
-ResultConverter
+
 	StructNode (I need a name for this structNode)	
 		(FieldSymbol, StructNode)
-			FieldSymbol
+			FieldSymbol (not sure if field symbol is the right choice)
 			StructNode
 				(ElementSymbol,Select)
 				(elementSymbol,Select)
 		(ElementSymbol, Select)
 			ElementSymbol
 			Select
-		(ElementSymbol, Pure(Select))
+		(ElementSymbol, Pure(Select))   (not sure if ElementSymbol is right choice for  primitive collection)
 			ElementSymbol
 			Pure
 				Select
