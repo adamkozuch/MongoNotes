@@ -5,47 +5,62 @@ build a collection type even if it is nested.
 
 
 I started with:
-TableExpansion
-	TableNode
-	TypeMapping
-		ProductNode
-			TableExpansion	
-				TableNode
-				TypeMapping
-					Select
-					Select
-			Select 
-			select    // here should be an array
-			TableExpansion   //this should be array of objects
-				TableNode
-				Typemapping 
-					Select
+Bind
+	TableExpansion
+		TableNode
+		TypeMapping
+			ProductNode
+				TableExpansion	
+					TableNode
+					TypeMapping
+						Select
+						Select
+				Select 
+				select    // here should be an array
+				TableExpansion   //this should be array of objects
+					TableNode
+					Typemapping 
+						Select
+	Pure
+		TableExpansion	
+			TableNode
+			TypeMapping
+				Select
+				Select
+			
 
 		
 				
 
 I ended with sth like:
-
-StructNode	
-	(FieldSymbol, StructNode)
-		FieldSymbol
-		StructNode
-			(FieldSymbol,Select)
-			(FieldSymbol,Select)
-	(FieldSymbol, Select)
-		FieldSymbol
-		Select
-	(FieldSymbol, Pure(Select))
-		FieldSymbol
-		Pure
-			Select(Path, SomeSymbol)
-	(FieldSymbol, Pure(StructNode))
+ResultConverter
+	StructNode (I need a name for this structNode)	
+		(FieldSymbol, StructNode)
 			FieldSymbol
+			StructNode
+				(ElementSymbol,Select)
+				(elementSymbol,Select)
+		(ElementSymbol, Select)
+			ElementSymbol
+			Select
+		(ElementSymbol, Pure(Select))
+			ElementSymbol
 			Pure
-				StructNode
-					(FieldSymbol, Select)
+				Select
+		(FieldSymbol, Pure(StructNode))
+				FieldSymbol
+				Pure
+					StructNode
+						(ElementSymbol, Select)
+	Pure
+		FieldSymbol
+			StructNode
+				(ElementSymbol,Select)
+				(elementSymbol,Select)
+		
+	
 
-
+That will be part of my operations.
 
 
 
