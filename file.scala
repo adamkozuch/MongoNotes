@@ -32,7 +32,7 @@ StructNode
 		StructNode
 			(FieldSymbol,Select)
 			(FieldSymbol,Select)
-	(FieldSymbol, Path)
+	(FieldSymbol, Select)
 		FieldSymbol
 		Select
 	(FieldSymbol, Pure(Select))
