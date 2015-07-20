@@ -1,7 +1,7 @@
-Type of ResultConverter would be Collection
-
-
-
+1. I used Pure as a representation of collection
+2. Not sure about it but probably get rid of TableNodes because it's
+build a collection type even if it is nested.
+3. First phase I will implementing will be ExpandDocument
 
 
 I started with:
@@ -12,14 +12,14 @@ TableExpansion
 			TableExpansion	
 				TableNode
 				TypeMapping
-					Path
-					Path
-			Path
-			Path   // here should be an array
+					Select
+					Select
+			Select 
+			select    // here should be an array
 			TableExpansion   //this should be array of objects
 				TableNode
 				Typemapping 
-					Path
+					Select
 
 		
 				
@@ -35,7 +35,7 @@ StructNode
 	(FieldSymbol, Path)
 		FieldSymbol
 		Select
-	(FieldSymbol, Pure(Select)
+	(FieldSymbol, Pure(Select))
 		FieldSymbol
 		Pure
 			Select(Path, SomeSymbol)
@@ -45,7 +45,6 @@ StructNode
 				StructNode
 					(FieldSymbol, Select)
 
-This would be a from part of ResultConverter
 
 
 
