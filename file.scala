@@ -27,23 +27,23 @@ TableExpansion
 I ended with sth like:
 
 StructNode	
-	(FieldSymbol, StructNode)
-		FieldSymbol
+	(AnonSymbol, StructNode)
+		AnonSymbol
 		StructNode
-			(FieldSymbol,Select)
-			(FieldSymbol,Select)
-	(FieldSymbol, Select)
-		FieldSymbol
+			(ElementSymbol,Select)
+			(elementSymbol,Select)
+	(ElementSymbol, Select)
+		ElementSymbol
 		Select
-	(FieldSymbol, Pure(Select))
-		FieldSymbol
+	(AnonSymbol, Pure(Select))
+		AnonSymbol
 		Pure
 			Select(Path, SomeSymbol)
-	(FieldSymbol, Pure(StructNode))
-			FieldSymbol
+	(AnonSymbol, Pure(StructNode))
+			AnonSymbol
 			Pure
 				StructNode
-					(FieldSymbol, Select)
+					(ElementSymbol, Select)
 
 
 
