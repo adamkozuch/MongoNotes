@@ -36,26 +36,26 @@ Bind
 
 I ended with sth like:
 Bind
-DocumentNode	
-	StructNode (I need a name for this structNode)	
-		(FieldSymbol, StructNode)
-			FieldSymbol (not sure if field symbol is the right choice)
-			StructNode
-				(FieldSymbol,Select)
-				(FieldSymbol,Select)
-		(FieldSymbol, Select)
-			FieldSymbol
-			Select
-		(FieldSymbol, Pure(Select))   
-			FieldSymbol
-			Pure
+	DocumentNode	
+		StructNode (I need a name for this structNode)	
+			(FieldSymbol, StructNode)
+				FieldSymbol (not sure if field symbol is the right choice)
+				StructNode
+					(FieldSymbol,Select)
+					(FieldSymbol,Select)
+			(FieldSymbol, Select)
+				FieldSymbol
 				Select
-		(FieldSymbol, Pure(StructNode, TypeSymbol))
+			(FieldSymbol, Pure(Select))   
 				FieldSymbol
 				Pure
-					TypeSumbol
-					StructNode
-						(FieldSymbol, Select)
+					Select
+			(FieldSymbol, Pure(StructNode, TypeSymbol))
+					FieldSymbol
+					Pure
+						TypeSumbol
+						StructNode
+							(FieldSymbol, Select)
 	Pure
 		StructNode
 			(FieldSymbol,Select)
