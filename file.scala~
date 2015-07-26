@@ -16,11 +16,13 @@ Bind
 						Select
 						Select
 				Select 
-				select    // here should be an array
-				TableExpansion   //this should be array of objects
-					TableNode
-					Typemapping 
-						Select
+				Pure(Select)    //array of primitives
+					Select
+				Pure(TableExpansion)
+					TableExpansion   
+						TableNode
+						Typemapping 
+							Select
 	Pure
 		TableExpansion	
 			TableNode

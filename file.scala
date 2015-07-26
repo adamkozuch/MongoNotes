@@ -65,19 +65,3 @@ DocumentNode
 
 
 
-
-
-
-
-
-
-
-I replace a node with one which childrean are tableExpansion
-
-
-Nominal type has a symbol.
-
-
-ResultConverter should have returned type
-
-
